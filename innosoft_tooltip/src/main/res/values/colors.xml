@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!--black color-->
+    <color name="em_black_100">#ff232323</color>
+    <color name="em_black_87">#dd232323</color>
+    <color name="em_black_58">#95232323</color>
+    <color name="em_black_54">#89232323</color>
+    <color name="em_black_50">#81232323</color>
+    <color name="em_black_44">#71232323</color>
+    <color name="em_black_42">#66232323</color>
+    <color name="em_black_38">#61232323</color>
+    <color name="em_black_28">#51232323</color>
+    <color name="em_black_18">#31232323</color>
+    <color name="em_black_15">#25232323</color>
+    <color name="em_black_12">#1e232323</color>
+    <color name="em_black_10">#0e232323</color>
+    <color name="em_black_8">#40595959</color>
+    <color name="em_black_4">#30595959</color>
+    <color name="em_black_2">#05232323</color>
+
+    <!--white color-->
+    <color name="em_white_100">#ffffff</color>
+    <color name="em_white_87">#f0ffffff</color>
+    <color name="em_white_80">#99ffffff</color>
+    <color name="em_white_64">#90ffffff</color>
+    <color name="em_white_54">#89ffffff</color>
+    <color name="em_white_38">#61ffffff</color>
+    <color name="em_white_12">#1effffff</color>
+
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TooltipLayout">
+        <attr name="tooltip_cornerRadius" format="integer"/>
+        <attr name="tooltip_backgroundColor" format="color" />
+        <attr name="tooltip_arrowDirection">
+            <flag name="top" value="0" />
+            <flag name="bottom" value="1" />
+        </attr>
+        <attr name="tooltip_arrowHeight" format="integer" />
+        <attr name="tooltip_arrowWidth" format="integer" />
+        <attr name="tooltip_arrowPosition" format="integer">
+            <enum name="center" value="-1" />
+        </attr>
+        <attr name="tooltip_gravity">
+            <flag name="top" value="0" />
+            <flag name="center" value="1" />
+        </attr>
+        <attr name="tooltip_style">
+            <flag name="fill" value="0" />
+            <flag name="border" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>

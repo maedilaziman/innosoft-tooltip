@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.maedi.soft.ino.tooltip.view.Tooltip
+            android:id="@+id/tooltip1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:tooltip_backgroundColor="@color/em_black_87"
+            app:tooltip_cornerRadius="30"
+            app:tooltip_arrowDirection="bottom"
+            app:tooltip_arrowHeight="60"
+            app:tooltip_arrowWidth="60"
+            app:tooltip_arrowPosition="200"
+            app:tooltip_gravity="top"
+            app:tooltip_style="fill"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi.."
+                android:textColor="@color/white"/>
+
+        </com.maedi.soft.ino.tooltip.view.Tooltip>
+
+        <Button
+            android:id="@+id/post1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TOOLTIP FILL COLOR"
+            android:textSize="18dp"/>
+
+        <Button
+            android:id="@+id/post2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TOOLTIP BORDER COLOR"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"/>
+
+        <com.maedi.soft.ino.tooltip.view.Tooltip
+            android:id="@+id/tooltip2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:tooltip_backgroundColor="@color/em_black_87"
+            app:tooltip_cornerRadius="30"
+            app:tooltip_arrowDirection="top"
+            app:tooltip_arrowHeight="60"
+            app:tooltip_arrowWidth="60"
+            app:tooltip_arrowPosition="200"
+            app:tooltip_gravity="center"
+            app:tooltip_style="border"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi.."
+                android:textColor="@color/em_black_100"/>
+
+        </com.maedi.soft.ino.tooltip.view.Tooltip>
+
+    </LinearLayout>
+
+</LinearLayout>

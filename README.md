@@ -20,7 +20,15 @@ Then, add the library to your module build.gradle
 <pre><span class="pl-en">dependencies</span> {
     implementation <span class="pl-s"><span class="pl-pds">'</span>com.github.maedilaziman:innosoft-tooltip:1.0.0<span class="pl-pds">'</span></span>
 }</pre>
-<br/>
+Release 1.0.1
+</br>
+</br>
+<pre><span class="pl-en">dependencies</span> {
+    implementation <span class="pl-s"><span class="pl-pds">'</span>com.github.maedilaziman:innosoft-tooltip:1.0.1<span class="pl-pds">'</span></span>
+}</pre>
+<h2>Features release 1.0.1</h2>
+Change tooltip design
+<br />
 <h2>Features</h2>
 <ul>
 <li>Create beauty tooltip</li>

@@ -26,13 +26,12 @@ Release 1.0.1
 <pre><span class="pl-en">dependencies</span> {
     implementation <span class="pl-s"><span class="pl-pds">'</span>com.github.maedilaziman:innosoft-tooltip:1.0.1<span class="pl-pds">'</span></span>
 }</pre>
-<h2>Features release 1.0.1</h2>
-Change tooltip design
-<br />
 <h2>Features</h2>
 <ul>
 <li>Create beauty tooltip</li>
 </ul>
+<h2>Features release 1.0.1</h2>
+Change tooltip design
 <br/>
 <h2>Usage</h2>
 example tooltip with style fill background color and arrow direction on bottom

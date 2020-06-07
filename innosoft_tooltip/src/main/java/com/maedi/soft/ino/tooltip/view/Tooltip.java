@@ -35,7 +35,6 @@ public class Tooltip extends LinearLayout {
     public Tooltip(Context context, AttributeSet attrs) {
         super(context, attrs);
         ctx = context;
-
         initialize(ctx);
 
         TypedArray a = context.getTheme().obtainStyledAttributes(
@@ -90,60 +89,50 @@ public class Tooltip extends LinearLayout {
         else
         {
             paint.setStyle(Paint.Style.STROKE);
-            paint.setStrokeWidth(5);
+            paint.setStrokeWidth(4);
         }
         paint.setColor(bgColor);
-        int ch = h/5;
+
+        if(arrowHeight > (h/2))arrowHeight = h/2;
+        if(arrowWidth > (w/2))arrowWidth = w/2;
+        int ch = h/8;
         if(radius > ch)radius = ch;
         int p = arrowHeight;
         int p2 = arrowWidth/2;
-        int c = arrowPos < 0 ? (w/2)-(p2) : arrowPos - p2;
+        if(arrowPos > 0){
+            if(arrowPos < radius)arrowPos = radius;
+            else if(arrowPos > (w-(radius*4)))arrowPos = w-(radius*4);
+        }
+        int c = arrowPos < 0 ? (w/2)-(p2) : arrowPos;
         c = Math.abs(c);
+        if(c < radius)c=radius;
+        else {
+            int limitRight = w - (radius * 2);
+            if (c > limitRight) c = limitRight;
+        }
+
         int c2 = c+p2;
         int c3 = c+(p2*2);
         int y = h-(h-p);
-        //path.reset();
-
-        int plusVal = 5;
 
         if(arrowDirection == 0) {
             path.moveTo(0, y + radius);
             path.quadTo(0, y, radius, y);
-
-            //path.moveTo(0, y);
             path.lineTo(c, y);
-            //path.quadTo(c, 0, c2, 0);
-            //path.quadTo(c2, y, c3, y);
             path.lineTo(c2, 0);
             path.lineTo(c3, y);
 
-            //path.lineTo(w, y);
             path.lineTo(w - radius, y);
-            //path.quadTo(w-(radius), y, w, y+(radius));
-            path.quadTo(w + (radius / 3), y, w, y + (radius * 2));
+            path.quadTo(w, y, w, y + radius);
 
             path.lineTo(w, h - radius);
             path.quadTo(w, h, w - radius, h);
 
-            //path.lineTo(w, h);
             path.lineTo(radius, h);
-            path.quadTo(0 - (radius / 3), h, 0, h - (radius * 2));
+            path.quadTo(0, h, 0, h - radius);
 
-            //path.lineTo(0, h);
             path.lineTo(0, y + radius);
             canvas.drawPath(path, paint);
-
-            if(tt_style == 1) {
-                path.reset();
-                path.moveTo(w, y + ((radius / 2))+plusVal);
-                path.lineTo(w, h - radius);
-                canvas.drawPath(path, paint);
-
-                path.reset();
-                path.moveTo(0, h - ((radius/2)+plusVal));
-                path.lineTo(0, y + radius);
-                canvas.drawPath(path, paint);
-            }
         }
         else
         {
@@ -152,7 +141,7 @@ public class Tooltip extends LinearLayout {
             path.quadTo(0, 0, radius, 0);
 
             path.lineTo(w - radius, 0);
-            path.quadTo(w + (radius / 3), 0, w, radius * 2);
+            path.quadTo(w, 0, w, radius);
 
             path.lineTo(w, posFromBottom - radius);
             path.quadTo(w, posFromBottom, w - radius, posFromBottom);
@@ -162,22 +151,10 @@ public class Tooltip extends LinearLayout {
             path.lineTo(c, posFromBottom);
 
             path.lineTo(radius, posFromBottom);
-            path.quadTo(0 - (radius / 3), posFromBottom, 0, posFromBottom - (radius * 2));
+            path.quadTo(0, posFromBottom, 0, posFromBottom-radius);
 
             path.lineTo(0, radius);
             canvas.drawPath(path, paint);
-
-            if(tt_style == 1) {
-                path.reset();
-                path.moveTo(w, (radius / 2)+plusVal);
-                path.lineTo(w, posFromBottom - radius);
-                canvas.drawPath(path, paint);
-
-                path.reset();
-                path.moveTo(0, posFromBottom - ((radius/2)+plusVal));
-                path.lineTo(0, radius);
-                canvas.drawPath(path, paint);
-            }
 
         }
 
